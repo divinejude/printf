@@ -1,4 +1,4 @@
-Project: Custom Printf Function
+roject: Custom Printf Function
 Description
 In this group project, our objective is to create a custom printf function in C, which will produce output according to a given format. The function will be able to handle specific conversion specifiers for characters (c), strings (s), and the percentage symbol (%). Additionally, we will extend its capabilities to handle decimal (d) and integer (i) conversion specifiers.
 
