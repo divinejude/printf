@@ -1,25 +1,24 @@
 #include "main.h"
 
 /**
- * get_precision - Extracts the precision for printing from the format string.
- * @format: The formatted string in which to print the arguments.
- * @i: Pointer to the current index in the format string.
- * @list: The list of arguments passed to the _printf function.
+ * get_precision - Calculates the precision for printing
+ * by Divine and Zineb
+ * @format: Formattedstringinwhichtoprintthearguments
+ * @i: Listofargumentstobeprinted.
+ * @list: list of arguments.
  *
- * Return: The precision value for printing.
+ * Return: Precision.
  */
 int get_precision(const char *format, int *i, va_list list)
 {
 	int curr_i = *i + 1;
 	int precision = -1;
 
-	/* Check if precision is specified */
 	if (format[curr_i] != '.')
 		return (precision);
 
 	precision = 0;
 
-	/* Extract precision value */
 	for (curr_i += 1; format[curr_i] != '\0'; curr_i++)
 	{
 		if (is_digit(format[curr_i]))
@@ -41,4 +40,3 @@ int get_precision(const char *format, int *i, va_list list)
 
 	return (precision);
 }
-

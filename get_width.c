@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * get_width - Extracts the width for printing from the format string.
- * @format: The formatted string in which to print the arguments.
- * @i: Pointer to the current index in the format string.
- * @list: The list of arguments passed to the _printf function.
+ * get_width - Calculates the width for printing
+ * by Divine and Zineb
+ * @format: Formattedstringinwhichtoprintthe arguments.
+ * @i: List of arguments to be printed.
+ * @list: list of arguments.
  *
- * Return: The width value for printing.
+ * Return: width.
  */
 int get_width(const char *format, int *i, va_list list)
 {
 	int curr_i;
 	int width = 0;
 
-	/* Extract width value from format string */
 	for (curr_i = *i + 1; format[curr_i] != '\0'; curr_i++)
 	{
 		if (is_digit(format[curr_i]))
@@ -35,4 +35,3 @@ int get_width(const char *format, int *i, va_list list)
 
 	return (width);
 }
-
